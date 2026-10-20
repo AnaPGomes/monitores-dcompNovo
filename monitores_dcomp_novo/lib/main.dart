@@ -1,6 +1,5 @@
-
 import 'package:flutter/material.dart';
-import 'Views/monitorView.dart';
+import 'Views/splash_screen.dart';
 
 void main() {
   runApp(const MeuApp());
@@ -17,7 +16,7 @@ class MeuApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const MonitorView(),
+      home: const SplashScreen(),
     );
   }
 }
