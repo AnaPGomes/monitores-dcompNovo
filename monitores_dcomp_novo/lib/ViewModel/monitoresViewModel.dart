@@ -36,4 +36,16 @@ class monitoresViewModel {
 
             return monitoresFiltrados;
     }
+
+    List<monitoresModel> horariosDoMonitor(
+        List<monitoresModel> todosMonitores,
+        monitoresModel monitor,
+        String categoriaOrigem,
+    ) {
+        return todosMonitores.where((item) {
+            return item.nome == monitor.nome &&
+                (categoriaOrigem == 'Todos' ||
+                    item.semana == categoriaOrigem);
+        }).toList();
+    }
 }
