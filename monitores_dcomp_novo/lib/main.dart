@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 import 'Views/splash_screen.dart';
 
 void main() {
@@ -15,6 +17,13 @@ class MeuApp extends StatelessWidget {
       title: 'Monitores DCOMP',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
+      ),
+      scrollBehavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: {
+          PointerDeviceKind.touch,
+          PointerDeviceKind.mouse,
+          PointerDeviceKind.trackpad,
+        },
       ),
       home: const SplashScreen(),
     );
